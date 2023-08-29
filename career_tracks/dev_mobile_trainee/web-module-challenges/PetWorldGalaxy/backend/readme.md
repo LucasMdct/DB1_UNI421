@@ -1,6 +1,5 @@
 
 # Backend - Pet Shop World Galaxy
-# Contact Form Backend
 
 This is a server (backend) built to receive and process contact form submissions from users. The server is developed using Node.js technology and integrates features for data validation, storage in a database, and email sending using SMTP.
 
