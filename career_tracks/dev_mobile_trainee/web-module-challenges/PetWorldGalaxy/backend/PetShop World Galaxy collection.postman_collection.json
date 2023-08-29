@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "09913b58-9025-4e9c-8b19-8a9531d2036b",
+		"name": "PetShop World Galaxy collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28019415",
+		"_collection_link": "https://restless-crescent-330560.postman.co/workspace/ssss~0840cd74-6908-413a-a7d1-0994c214595e/collection/28019415-09913b58-9025-4e9c-8b19-8a9531d2036b?action=share&source=collection_link&creator=28019415"
+	},
+	"item": [
+		{
+			"name": "Cadastro de mensagem",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"douglas junior nassif roma\",\n    \"email\": \"nassifrroma@gmail.com\",\n    \"phonenumber\": \"(44)998373434\",\n    \"message\": \" segundo teste de backend .\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/data/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"data",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
