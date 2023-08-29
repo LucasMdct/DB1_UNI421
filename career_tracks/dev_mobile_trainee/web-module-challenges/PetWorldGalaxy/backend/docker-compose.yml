@@ -1,0 +1,11 @@
+services:
+  db:
+    image: mysql:8
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: petworldgalaxy
+      MYSQL_DATABASE: mede3074_pwg
+    ports:
+      - "3306:3306"
+    volumes:
+      - $TMP/database:/var/lib/mysql
