@@ -1,1 +1,47 @@
 /* DESKTOP RESPONSIVE */
+
+@media (min-width: 500px) and (max-width: 1920px) {
+    .heading-menu {
+        display: none;
+    }
+
+    .heading-nav {
+        display: block;
+        float: right;
+    }
+
+    .heading-nav ul li {
+        display: inline-block;
+        width: auto;
+        margin-top: 10px;
+    }
+
+    .heading-nav a:hover {
+        color: blue;
+    }
+
+    .banner img {
+        margin-top: 0;
+        width: 100%;
+        height: fit-content;
+    }
+
+    .main {
+        width: 70%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .grid-coluna {
+        margin: 10px;
+    }
+
+    .footer-pagamento {
+        width: 450px;
+    }
+}

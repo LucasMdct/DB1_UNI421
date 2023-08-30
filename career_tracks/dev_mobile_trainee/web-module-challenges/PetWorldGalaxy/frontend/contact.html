@@ -43,35 +43,25 @@
         <img src="./assets/banner_pwg.jpg" alt="banner" />
     </section>
     <main>
-        <h1> Mais Sobre a PWG </h1>
+        <h1> Envie seu formulario para mais Informações </h1>
 
-        <div class="grid">
-            <div class="grid-coluna">
-                <img src="assets/03.webp" alt="Produto 01">
-                <p class="description"> Banho e tosa</p>
-                <p class="value">R$ 599,90</p>
-            </div>
-            <div class="grid-coluna">
-                <img src="assets/02.webp" alt="Produto 02">
-                <p class="description">Taxi Pets</p>
-                <p class="value">R$ 899,90</p>
-            </div>
-            <div class="grid-coluna">
-                <img src="assets/05.webp" alt="Produto 03">
-                <p class="description">Plano de Saúde</p>
-                <p class="value">R$ 499,99 p/mês</p>
-            </div>
-            <div class="grid-coluna">
-                <img src="assets/07.webp" alt="Produto 04">
-                <p class="description">SPA para pets</p>
-                <p class="value">Diária R$ 1.999,99</p>
-            </div>
-        </div>
-        <h2>Conheça a nova técnica</h2>
-        <iframe width="100%" height="498" src="https://www.youtube.com/embed/H9-PWEG3TFQ?si=waC_XozCVyBOGbuk"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
+        <form name="formulario" method="post" action="http://localhost:3000/data" class="formulario">
+
+            <label for="name">Preencha seu Nome:</label>
+            <input type="text" name="name" id="name" required>
+
+            <label for="email">Preencha seu e-mail:</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="phonenumber">Seu número de telefone:</label>
+            <input type="tel" name="phonenumber" id="phonenumber" required placeholder="(xx) xxxxx-xxxx">
+
+            <label for="message">Preencha sua Mensagem:</label>
+            <textarea name="message" id="message" rows="5" required></textarea>
+
+            <button class="botao" type="submit">Enviar Mensagem</button>
+
+        </form>
 
     </main>
 
