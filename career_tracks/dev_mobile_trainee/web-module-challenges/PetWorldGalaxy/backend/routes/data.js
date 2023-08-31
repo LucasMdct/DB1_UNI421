@@ -20,7 +20,7 @@ async function sendResponseEmail(formData) {
 
     const mailOptions = {
       from: `"Nome do Remetente" <${smtpConfig.auth.user}>`,
-      to: 'lucasmedeiroscosta07@gmail.com',
+      to: 'andressaandrade5243@gmail.com',
       subject: 'Resposta Automática: Novo Formulário Recebido',
       html: `
           <p>Um novo formulário foi recebido:</p>
@@ -66,7 +66,13 @@ router.post(
       const formdata = await Formdata.findByPk(insert.get('id'));
 
       sendResponseEmail(formdata); // Chama a função para enviar o e-mail de resposta
-      res.status(201).json({ message: 'Form sent successfully' });
+      if(!sendResponseEmail) {
+          console.log('nao foi enviado');
+      } else {
+         res.status(201).json();
+         return;
+      }
+     
 
     } catch (error) {
       console.warn(error);

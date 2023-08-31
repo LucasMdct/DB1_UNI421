@@ -45,8 +45,8 @@
     <main>
         <h1> Envie seu formulario para mais Informações </h1>
 
-        <form name="formulario" method="post" action="http://localhost:3000/data" class="formulario">
-
+         <form id="contacts" autocorrect="off" name="adicionar" onsubmit="mySubmitFunction(event);">
+ 
             <label for="name">Preencha seu Nome:</label>
             <input type="text" name="name" id="name" required>
 
@@ -81,6 +81,25 @@
         function openMenu() {
             document.querySelector('.heading-nav').classList.toggle('show');
         }
+		    function mySubmitFunction(event) {
+      event.preventDefault();
+
+      const form = event.target;
+      const formData = new FormData(form);
+
+      fetch('http://localhost:3000/data', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.text())
+      .then(result => {
+        alert(result);
+      })
+      .catch(error => {
+        console.error('Erro:', error);
+      });
+    }
+
     </script>
 
 </body>
