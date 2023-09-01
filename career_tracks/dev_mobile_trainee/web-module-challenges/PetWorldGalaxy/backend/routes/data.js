@@ -2,7 +2,6 @@ const nodemailer = require('nodemailer'); // Adicione essa linha
 var express = require('express');
 const { ValidationError } = require('sequelize');
 const DateJS = require('datejs');
-
 const smtpConfig = require('../configs/smtpConfig');
 const smtpSettings = nodemailer.createTransport(smtpConfig);
 
@@ -12,6 +11,7 @@ const { checkIsEmpty } = require('../validators');
 const { validationForm } = require('../validators/formdata');
 
 var router = express.Router();
+
 
 async function sendResponseEmail(formData) {
   try {
@@ -66,20 +66,15 @@ router.post(
       const formdata = await Formdata.findByPk(insert.get('id'));
 
       sendResponseEmail(formdata); // Chama a função para enviar o e-mail de resposta
-      if(!sendResponseEmail) {
-          console.log('nao foi enviado');
-      } else {
-         res.status(201).json();
-         return;
-      }
-     
-
+        res.status(201).json();
+        return;
     } catch (error) {
       console.warn(error);
       res.status(500).send();
     }
   },
 );
+
 
 
 
