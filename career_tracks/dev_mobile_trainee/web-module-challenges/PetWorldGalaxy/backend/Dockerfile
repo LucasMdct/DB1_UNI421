@@ -2,7 +2,7 @@ FROM node:18-alpine
 
 WORKDIR /home/ubuntu/backend
 
-EXPOSE 3000
+EXPOSE 3001
 
 HEALTHCHECK --interval=30s --retries=3 \
     CMD wget -q --spider http://127.0.0.1:3000/healthcheck || exit 1

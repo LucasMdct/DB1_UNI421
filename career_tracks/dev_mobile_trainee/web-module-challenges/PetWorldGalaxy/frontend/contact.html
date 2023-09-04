@@ -44,29 +44,24 @@
     </section>
     <main>
         <h1> Envie seu formulario para mais Informações </h1>
-
-         <form id="contacts" autocorrect="off" name="adicionar" onsubmit="mySubmitFunction(event);">
- 
+        
+        <form id="contacts" autocorrect="off" name="add">
+        
             <label for="name">Preencha seu Nome:</label>
-            <input type="text" name="name" id="name" required>
+            <input id="name" type="text" name="name" placeholder="Nome" required>
 
             <label for="email">Preencha seu e-mail:</label>
-            <input type="email" name="email" id="email" required>
+            <input id="email" type="email" name="email" placeholder="Email" required>
 
             <label for="phonenumber">Seu número de telefone:</label>
-            <input type="tel" name="phonenumber" id="phonenumber" required placeholder="(xx) xxxxx-xxxx">
+            <input id="phonenumber" type="tel" name="phonenumber" placeholder="(xx) xxxxx-xxxx" required>
 
             <label for="message">Preencha sua Mensagem:</label>
-            <textarea name="message" id="message" rows="5" required></textarea>
+            <textarea id="message" name="message" placeholder="A Sua Mensagem" rows="5"></textarea>
 
-            <button class="botao" type="submit">Enviar Mensagem</button>
-
+            <button class="button" type="submit" onclick="submitForm()">Enviar</button>
         </form>
-
     </main>
-
-
-
     <footer class="footer">
 
         <p>Pet Shop World Galaxy - Tudo e mais um pouco para o seu pet </p>
@@ -78,25 +73,29 @@
     </footer>
 
     <script>
-        function openMenu() {
+         function openMenu() {
             document.querySelector('.heading-nav').classList.toggle('show');
         }
-		    function mySubmitFunction(event) {
-      event.preventDefault();
-
-      const form = event.target;
-      const formData = new FormData(form);
+		  
+       function submitForm() {
+      const formData = new FormData(document.getElementById('contacts'));
 
       fetch('http://localhost:3000/data', {
         method: 'POST',
         body: formData
       })
-      .then(response => response.text())
-      .then(result => {
-        alert(result);
+      .then(response => {
+        if (response.status === 201) {
+          alert('Formulário enviado com sucesso.');
+          document.getElementById('contacts').reset(); // Limpa o formulário
+        } else {
+          alert('Ocorreu um erro ao enviar o formulário.');
+        }
+
       })
       .catch(error => {
         console.error('Erro:', error);
+        alert('Ocorreu um erro ao enviar o formulário.');
       });
     }
 
