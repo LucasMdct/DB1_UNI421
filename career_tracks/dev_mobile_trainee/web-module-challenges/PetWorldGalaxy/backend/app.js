@@ -10,7 +10,7 @@ const dataRouter = require('./routes/data');
 const app = express();
 
 app.use(cors({
-  origin: 'http://uni421.medeirosdev.cloud/PWG/contact.html',
+  origin: 'http://uni421.medeirosdev.cloud',
   methods: ['POST'], 
   allowedHeaders: ['Content-Type', 'Authorization'], 
 }));
