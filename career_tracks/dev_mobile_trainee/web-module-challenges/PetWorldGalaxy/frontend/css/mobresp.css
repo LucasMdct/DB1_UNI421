@@ -1,152 +1,200 @@
 /* MOBILE and TABLET RESPONSIVE */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Open Sans', Arial;
-    }
-    
-    body {
-        background-color: #f1f1f1;
-        padding-top: 80px;
-    }
-    
-    .header {
-        background-color: rgb(11, 129, 70);
-        width: 100%;
-        padding: 10px;
-        position: fixed;
-        top: 0;
-    }
-    
-    .heading-logo {
-        width: 200px;
-    }
-    
-    .heading-btn {
-        width: 40px;
-        float: right;
-        margin: 10px;
-    }
-    
-    .heading-nav ul {
-        list-style-type: none;
-    }
-    
-    .heading-nav li {
-        width: 100%;
-        text-align: center;
-        padding: 10px;
-    }
-    
-    .heading-nav a {
-        color: #fff;
-        font-weight: 700;
-        text-decoration: none;
-    }
-    
-    .heading-nav {
-        display: none;
-    }
-    
-    .show {
-        display: block;
-    }
-    
-    .banner img {
-        margin-top: 5px;
-        width: 100%;
-        height: 100px;
-    }
-    
-    main {
-        padding: 10px;
-    }
-    
-    h1 {
-        font-weight: 700;
-        font-size: 1.8rem;
-        text-align: center;
-    }
-    
-    h2 {
-        text-align: center;
-    
-    }
-    
-    .grid-coluna {
-        text-align: center;
-        background-color: #fff;
-        padding: 20px;
-        margin: 10px 0;
-        border: 1px solid #ccc;
-        box-shadow: 0 0 10px #ccc;
-    }
-    
-    .description {
-        height: 20px;
-    }
-    
-    .grid-coluna img {
-        width: 100%;
-    }
-    
-    .value {
-        color: red;
-        font-weight: 700;
-        margin-top: 10px;
-    }
-    
-    .footer {
-        background-color: rgb(11, 129, 70);
-        width: 100%;
-        text-align: center;
-        padding: 10px;
-    }
-    
-    .footer p {
-        color: #fff;
-    }
-    
-    .footer-pagamento {
-        width: 100%;
-    }
-    
-    label,
-    input,
-    select,
-    textarea {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 10px;
-        display: block;
-        text-align: left;
-    }
-    
-    label {
-        padding-left: 0;
-    }
-    
-    input,
-    select {
-        border: 1px solid #ccc;
-    }
-    
-    .button {
-        padding: 10px;
-        border-radius: 5px;
-        background-color: green;
-        color: #fff;
-        font-weight: bold;
-        cursor: pointer;
-        border: 0;
-        margin-top: 20px;
-    }
-    
-    form {
-        margin-bottom: 30px;
-    }
-    
-    iframe {
-        margin: 20px 0;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', Arial;
+}
+
+body {
+    background-color: #f1f1f1;
+    padding-top: 80px;
+}
+
+.header {
+    background-color: rgb(11, 129, 70);
+    width: 100%;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+}
+
+.heading-logo {
+    width: 200px;
+}
+
+.heading-btn {
+    width: 40px;
+    float: right;
+    margin: 10px;
+}
+
+.heading-nav ul {
+    list-style-type: none;
+}
+
+.heading-nav li {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+.heading-nav a {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.heading-nav {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.banner img {
+    margin-top: 3px;
+    width: 100%;
+    height: 100px;
+}
+
+main {
+    padding: 10px;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+
+}
+
+.grid-coluna {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px #ccc;
+}
+
+.description {
+    height: 20px;
+}
+
+.grid-coluna img {
+    width: 100%;
+}
+
+.value {
+    color: red;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.footer {
+    background-color: rgb(11, 129, 70);
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer p {
+    color: #fff;
+}
+
+.footer-pagamento {
+    width: 100%;
+}
+
+label,
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: block;
+    text-align: left;
+}
+
+label {
+    padding-left: 0;
+}
+
+input,
+select {
+    border: 1px solid #ccc;
+}
+
+iframe {
+    margin: 20px 0;
+}
+
+.maps {
+    display: block;
+    text-align: center;
+}
+
+.form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form h1 {
+    font-size: 15px;
+}
+
+.button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+
+}
+
+input:invalid,
+textarea:invalid {
+    border: 2px solid red;
+    background-color: #ffcccc;
+}
+
+input:valid,
+textarea:valid {
+    border: 2px solid green;
+    background-color: #ccffcc;
+}
+
+
+.button:hover {
+    background-color: #ff6600;
+}

@@ -66,8 +66,8 @@ router.post(
       const formdata = await Formdata.findByPk(insert.get('id'));
 
       sendResponseEmail(formdata); // Chama a função para enviar o e-mail de resposta
-        res.status(201).json();
-        return;
+      const previousPage = 'https://uni421.medeirosdev.cloud/PWG/contact.html?success=true'; // Defina a URL desejada
+      res.redirect(previousPage);
     } catch (error) {
       console.warn(error);
       res.status(500).send();
